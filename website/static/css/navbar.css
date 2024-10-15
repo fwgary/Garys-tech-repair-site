@@ -7,6 +7,9 @@
     --navbar-light-primary: #f5f6fa;
     --navbar-light-secondary: #8392a5;
   }
+  #title{
+    color: #ff0000;
+   }
   body{
     background-color: var(--background);
   }
