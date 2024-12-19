@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Devices - Gary's Repairs</title>
+</head>
+<body>
+    <header>
+        <h1>Gary's Repairs</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/devices">Devices</a>
+            <a href="/faq">FAQ</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Available Devices</h2>
+        <div>
+            <h3>Phones</h3>
+            <img src="{{ url_for('static', filename='images/device1.jpg') }}" alt="Device 1">
+            <p>iPhone Repair - $100</p>
+            <button onclick="document.getElementById('checkout-form').style.display='block'">Checkout</button>
+            <div id="checkout-form" style="display:none;">
+                <form action="/checkout" method="POST">
+                    <input type="checkbox" name="agree" required> I agree to the terms and services<br>
+                    <button type="submit" style="background-color: blue; color: white;">Checkout</button>
+                </form>
+            </div>
+        </div>
+        <!-- Add more devices similarly -->
+    </div>
+    <footer>
+        <p>&copy; 2023 Gary's Repairs</p>
+    </footer>
+</body>
+</html>
